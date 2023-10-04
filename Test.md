@@ -1,2 +1,1 @@
-# Welcome to my Lab website!!
-
+# Lab Report 1!!
