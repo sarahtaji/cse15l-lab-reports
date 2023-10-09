@@ -11,13 +11,13 @@ In this lab, I will demonstrate three fundamental filesystem commands: 'cd', 'ls
   
 ![image]("cd1.png"width="60"height="50") 
 
-When 'cd' is used without an argument, it doesn't output anything. It returns the user to the home directory. 
+When the command is used without an argument, it doesn't output anything. It returns the user to the home directory. 
 
 - Example 2: Using 'cd' with a path to a directory as an argument
 
 ![image](cd2.png) 
 
-Now that 'cd' is used with a directory name as an argument, it has changed the working directory to the specified directory (/ git clone https:/github.com/ucsd-cse151f2315).
+Now that the command is used with a directory name as an argument, it has changed the working directory to the specified directory (/ git clone https:/github.com/ucsd-cse151f2315).
 
 - Example 3: Using 'cd' with a path to a file as an argument
 
@@ -34,6 +34,10 @@ After using the command, the output showed an error because 'cd' only works with
 When using the command without arguments, it lists the directories and files in the current working directory.
 
 - Example 2: Using 'ls' with a path to a directory as an argument
+
+![image](ls2.png)
+
+Now that we have used the command with an argument ('git clone https:/'), it lists all the files and directories that are in that directory.
 
 - Example 3: Using 'ls' with a path to a file as an argument
 
