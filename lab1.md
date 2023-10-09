@@ -41,9 +41,9 @@ Now that we have used the command with an argument ('git clone https:/'), it lis
 
 - Example 3: Using 'ls' with a path to a file as an argument
 
-![image](ls3.png)
+![image](ls3-.png)
 
-
+After using the command, the resulting output showed an error because 'ls' can't be used with a file as an argument; it only works with directories. Additionally, the file doesn't contain any content, so there was nothing for it to output.
 
 ## cat - Concatenate
 
