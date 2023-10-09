@@ -28,8 +28,13 @@ After using the command, the output showed an error because 'cd' only works with
 ## ls - List 
 
 - Example 1: Using 'ls' with no argument
-  
+
+![image](ls1-.png)
+
+When using the command without arguments, it lists the directories and files in the current working directory.
+
 - Example 2: Using 'ls' with a path to a directory as an argument
+
 - Example 3: Using 'ls' with a path to a file as an argument
 
 ## cat - Concatenate
