@@ -48,8 +48,19 @@ After using the command, the resulting output showed an error because 'ls' can't
 ## cat - Concatenate
 
 - Example 1: Using 'cat' with no argument
-![image](cat-.png)
+
+![image](cat1.png)
+
+When using the command without an argument, it doesn't output anything because 'cat' is used for concatenate and display the content of one or more files. It's a versatile command that can be used to read, create, and manipulate files. When you use 'cat' followed by a file name, it displays the contents of that file in the terminal.
+
 - Example 2: Using 'cat' with a path to a directory as an argument
-![image](cat-.png)
+
+![image](cat2.png)
+
+Now that we used a directory as an argument, it resulted in an error because the 'cat' command can't be used with a directory as an argument. What it does is attempt to concatenate and display the content of files. However, since the argument was a directory with multiple paths, it resulted in an error. 
+
 - Example 3: Using 'cat' with a path to a file as an argument
-![image](cat-.png)
+
+![image](cat3.png)
+
+After using the command with a path to a file as an argument, it displayed the content of the file in the terminal 
