@@ -9,7 +9,7 @@ In this lab, I will demonstrate three fundamental filesystem commands: 'cd', 'ls
 
 - Example 1: Using 'cd' with no argument
   
-![image]("cd1.png"width="60"height="50") 
+![image](cd1.png) 
 
 When the command is used without an argument, it doesn't output anything. It returns the user to the home directory. 
 
@@ -40,6 +40,10 @@ When using the command without arguments, it lists the directories and files in 
 Now that we have used the command with an argument ('git clone https:/'), it lists all the files and directories that are in that directory.
 
 - Example 3: Using 'ls' with a path to a file as an argument
+
+![image](ls3.png)
+
+
 
 ## cat - Concatenate
 
