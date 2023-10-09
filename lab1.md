@@ -48,5 +48,8 @@ After using the command, the resulting output showed an error because 'ls' can't
 ## cat - Concatenate
 
 - Example 1: Using 'cat' with no argument
+![image](cat-.png)
 - Example 2: Using 'cat' with a path to a directory as an argument
+![image](cat-.png)
 - Example 3: Using 'cat' with a path to a file as an argument
+![image](cat-.png)
