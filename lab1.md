@@ -60,12 +60,12 @@ This behavior continues until you send an end-of-file signal (Ctrl+D) to exit. T
 
 - Example 2: Using 'cat' with a path to a directory as an argument
 
-![image](cat2.png)
+![image](cat2R.png)
 
 Now that we used a directory as an argument, it resulted in an error because the 'cat' command can't be used with a directory as an argument. What it does is attempt to concatenate and display the content of files. However, since the argument was a directory with multiple paths, it resulted in an error. 
 
 - Example 3: Using 'cat' with a path to a file as an argument
 
-![image](cat3.png)
+![image](cat3R.png)
 
 After using the command with a path to a file as an argument, it displayed the content of the file in the terminal 
