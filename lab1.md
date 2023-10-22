@@ -37,13 +37,13 @@ When using the command without arguments, it lists the directories and files in 
 
 ![image](ls2.png)
 
-Now that we have used the command with an argument ('git clone https:/'), it lists all the files and directories that are in that directory.
+Now that we have used the command with an argument ('lab1'), it lists all the files and directories in the current directory.
 
 - Example 3: Using 'ls' with a path to a file as an argument
 
-![image](ls3-.png)
+![image](ls3R.png)
 
-After using the command, the resulting output showed an error because 'ls' can't be used with a file as an argument; it only works with directories. Additionally, the file doesn't contain any content, so there was nothing for it to output.
+After using the command, the resulting output showed an error because 'ls' can't be used with a file as an argument; it only works with directories. Additionally, the file doesn't contain any content, so there was nothing to output.
 
 ## 'cat' - Concatenate
 
