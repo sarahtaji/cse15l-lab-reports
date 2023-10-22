@@ -51,7 +51,12 @@ After using the command, the resulting output showed an error because 'ls' can't
 
 ![image](cat1.png)
 
-When using the cat command without an argument, it appears as if it doesn't output anything. However, in this mode, 'cat' waits for input from the input. Anything you type will be echoed back to the standard output once you hit enter. This behavior continues until you send an end-of-file signal (Ctrl+D) to exit. The primary function of 'cat' is to concatenate and display the content of one or more files. It's a versatile command that can be used to read, create, and manipulate files. When you use 'cat' followed by a file name, it displays the contents of that file in the terminal. So, when you run 'cat' with no arguments, it's actually reading from standard input and writing to standard output.
+When using the cat command without an argument, it appears as if it doesn't output anything. However, in this mode, 'cat' waits for input from the input. Anything you type will be echoed back to the standard output once you hit enter.
+
+As seen in the picture:
+![image](cat1R.png)
+
+This behavior continues until you send an end-of-file signal (Ctrl+D) to exit. The primary function of 'cat' is to concatenate and display the content of one or more files. It's a versatile command that can be used to read, create, and manipulate files. When you use 'cat' followed by a file name, it displays the contents of that file in the terminal. So, when you run 'cat' with no arguments, it's actually reading from standard input and writing to standard output.
 
 - Example 2: Using 'cat' with a path to a directory as an argument
 
