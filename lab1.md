@@ -35,7 +35,7 @@ When using the command without arguments, it lists the directories and files in 
 
 - Example 2: Using 'ls' with a path to a directory as an argument
 
-![image](ls2.png)
+![image](ls2R.png)
 
 Now that we have used the command with an argument ('lab1'), it lists all the files and directories in the current directory.
 
