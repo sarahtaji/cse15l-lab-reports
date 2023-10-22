@@ -5,7 +5,7 @@ In this lab, I will demonstrate three fundamental filesystem commands: 'cd', 'ls
 
 ---
 
-## cd - Change Directory 
+## 'cd' - Change Directory 
 
 - Example 1: Using 'cd' with no argument
   
@@ -25,7 +25,7 @@ Now that the command is used with a directory name as an argument, it has change
 
 After using the command, the output showed an error because 'cd' only works with directories. When the command is used with a file as an argument, it attempts to find a directory with the same name as the file. That's why it resulted in an error.
 
-## ls - List 
+## 'ls' - List 
 
 - Example 1: Using 'ls' with no argument
 
@@ -45,13 +45,13 @@ Now that we have used the command with an argument ('git clone https:/'), it lis
 
 After using the command, the resulting output showed an error because 'ls' can't be used with a file as an argument; it only works with directories. Additionally, the file doesn't contain any content, so there was nothing for it to output.
 
-## cat - Concatenate
+## 'cat' - Concatenate
 
 - Example 1: Using 'cat' with no argument
 
 ![image](cat1.png)
 
-When using the command without an argument, it doesn't output anything because 'cat' is used for concatenate and display the content of one or more files. It's a versatile command that can be used to read, create, and manipulate files. When you use 'cat' followed by a file name, it displays the contents of that file in the terminal.
+When using the cat command without an argument, it appears as if it doesn't output anything. However, in this mode, 'cat' waits for input from the input. Anything you type will be echoed back to the standard output once you hit enter. This behavior continues until you send an end-of-file signal (Ctrl+D) to exit. The primary function of 'cat' is to concatenate and display the content of one or more files. It's a versatile command that can be used to read, create, and manipulate files. When you use 'cat' followed by a file name, it displays the contents of that file in the terminal. So, when you run 'cat' with no arguments, it's actually reading from standard input and writing to standard output.
 
 - Example 2: Using 'cat' with a path to a directory as an argument
 
