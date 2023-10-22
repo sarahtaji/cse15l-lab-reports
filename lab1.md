@@ -21,7 +21,7 @@ Now that the command is used with a directory name as an argument, it has change
 
 - Example 3: Using 'cd' with a path to a file as an argument
 
-![image](cd3-.png) 
+![image](cd2.png) 
 
 After using the command, the output showed an error because 'cd' only works with directories. When the command is used with a file as an argument, it attempts to find a directory with the same name as the file. That's why it resulted in an error.
 
