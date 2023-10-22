@@ -15,7 +15,7 @@ When the command is used without an argument, it doesn't output anything. It ret
 
 - Example 2: Using 'cd' with a path to a directory as an argument
 
-![image](cd2-.png) 
+![image](cd2.png) 
 
 Now that the command is used with a directory name as an argument, it has changed the working directory to the specified directory (/ git clone https:/github.com/ucsd-cse151f2315).
 
