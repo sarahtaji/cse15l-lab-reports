@@ -51,7 +51,7 @@ After using the command, the resulting output showed an error because 'ls' can't
 
 ![image](cat1.png)
 
-When using the cat command without an argument, it appears as if it doesn't output anything. However, in this mode, 'cat' waits for input from the input. Anything you type will be echoed back to the standard output once you hit enter.
+When using the cat command without an argument, it appears as if it doesn't output anything. However, in this command, 'cat' waits for input from the input. Anything you type will be echoed back to the standard output once you hit enter.
 
 As seen in the picture:
 ![image](cat1R.png)
