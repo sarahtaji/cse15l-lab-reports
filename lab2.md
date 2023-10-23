@@ -47,7 +47,7 @@ class StringServer {
     }
 }
 ```
-The `Server.java` file is in the `Server` class which utilizes Java's built-in `HttpServer`. A custom handler `ServerHttpHandler` is defined to manage the requests and delegate them to the `Handler`.
+The `Server.java` file is in the `Server` class, which utilizes Java's built-in `HttpServer`. A custom handler, `ServerHttpHandler,` is defined to manage the requests and delegate them to the `Handler`.
 
 ## Code `Server.java`: 
 ```java
@@ -108,7 +108,7 @@ Compiling:
 
 To compile both of the codes, we first need to change to the directory that contains both `Server.java` and `StringServer.java`
 
-Then we run it by using the following commands: 
+Then, we run it by using the following commands: 
 ![image](RunCode.png)
 
 The Number `4024` is my port number, which I've chosen to run the server on.
@@ -119,13 +119,13 @@ __Screenshot of add-message "Hello":__
    - The `handleRequest` method from the `Handler` class was called to process the request and generate the response based on the URL path and parameters.
    - The `handle` method from the `ServerHttpHandler` class was also accessed, which served as a bridge, taking in the `HTTP` request and guiding it to the correct `handler `method.
 
-2) What are the relevant arguments to those methods, and the values of any relevant fields of the class?
-   - When processing the request, the method looks at the `url`, which in this case, receives the value `/add-message?s=Hello`. As the method processes the `url`, it makes changes to the `state` of the class. Initially, `state` might be an empty string, but after processing the `/add-message?s=Hello` request, the `state` updates to contain the string `"1. Hello"`. In this context, the relevant argument to my method is the `url` with its specific value, and the field of the class that gets updated is `state`.
+2) What are the relevant arguments to those methods and the values of any relevant class fields?
+   - When processing the request, the method looks at the `url`, which in this case, receives the value `/add-message?s=Hello`. As the method processes the `url`, it changes the `state` of the class. Initially, `state` might be an empty string, but after processing the `/add-message?s=Hello` request, the `state` updates to contain the string `"1. Hello"`. In this context, the relevant argument to my method is the `url` with its specific value, and the class field that gets updated is `state`.
 
 3) How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
-   - When accessing the `/add-message?s=Hello` endpoint, the initial value of the `state` field is an empty string, and the `currentIdx` starts at `0`. After processing the request, the `state` field changes to `"1. Hello"` and the `currentIdx` increments to `1`. If a request doesn't lead to a change in these values, such as a different request path or missing parameter, the fields would remain unchanged because the conditions to modify them in the `handleRequest` method wouldn't be met.
+   - When accessing the `/add-message?s=Hello` endpoint, the initial value of the `state` field is an empty string, and the `currentIdx` starts at `0`. After processing the request, the `state` field changes to `"1. Hello"` and the `currentIdx` increments to `1`. If a request doesn't change these values, such as a different request path or missing parameter, the fields would remain unchanged because the conditions to modify them in the `handleRequest` method wouldn't be met.
 
-__Screenshot of add-messag "How are you":__
+__Screenshot of add-message "How are you":__
  ![image](How1.png)
 1) Which methods in your code are called?
    - the `handle` method from `ServerHttpHandler` class is called to process the `HTTP` request.
@@ -143,11 +143,11 @@ __Screenshot of add-messag "How are you":__
   ![image](user_.png)
 - The path to the public key for SSH key for logging into `ieng6` (within your account on `ieng6`)
   ![image](Key.png)
-- The terminal interaction logged into `ieng6` with course-specific account without being asked for a password.
+- The terminal interaction logged into `ieng6` with a course-specific account without being asked for a password.
  ![image](log1.png)
 
 ## Part 3: Reflection 
-During the 2nd and 3rd weeks of the lab, I've acquired several technical skills that I wasn't familiar with before, such as:
+During the 2nd and 3rd weeks of the lab, I acquired several technical skills that I wasn't familiar with before, such as:
 
 - Setting up and using `SSH keys`, which removed the constant need for entering a password every time I accessed `ieng6`.
 - Utilizing the `SCP command` to quickly transfer files between my computer and `ieng6`.
