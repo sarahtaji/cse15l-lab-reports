@@ -103,15 +103,40 @@ public class Server {
     }
 }
 ```
--Compiling: 
+Compiling: 
 
 To compile both of the codes, we first need to change to the directory that contains both `Server.java` and `StringServer.java`
 
 Then we run it by using the following commands: 
-
+![image](RunCode.png)
 
 The Number `4024` is my port number, which I've chosen to run the server on.
 
+__Screenshot of add-message "Hello":__
+ ![image](Hello1.png)
+1) which methods in your code are called?
+   - The `handleRequest` method from the `Handler` class was called to process the request and generate the response based on the URL path and parameters.
+   - The `handle` method from the `ServerHttpHandler` class was also accessed, which served as a bridge, taking in the `HTTP` request and guiding it to the correct `handler `method.
 
+2) What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+   - When processing the request, the method looks at the `url`, which in this case, receives the value `/add-message?s=Hello`. As the method processes the `url`, it makes changes to the `state` of the class. Initially, `state` might be an empty string, but after processing the `/add-message?s=Hello` request, the `state` updates to contain the string `"1. Hello"`. In this context, the relevant argument to my method is the `url` with its specific value, and the field of the class that gets updated is `state`.
+
+3) How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+   - When accessing the `/add-message?s=Hello` endpoint, the initial value of the `state` field is an empty string, and the `currentIdx` starts at `0`. After processing the request, the `state` field changes to `"1. Hello"` and the `currentIdx` increments to `1`. If a request doesn't lead to a change in these values, such as a different request path or missing parameter, the fields would remain unchanged because the conditions to modify them in the `handleRequest` method wouldn't be met.
+
+__Screenshot of add-messag "How are you":__
+ ![image](How1.png)
+1) Which methods in your code are called?
+   - the `handle` method from `ServerHttpHandler` class is called to process the `HTTP` request.
+   - The method calls the `handleRequest` method in the `Handler` class to determine the URL path and parameter.
+
+2) What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+   - When the `handle` method in `ServerHttpHandler` is called, it uses the `exchange` argument to get details of the web request, including the message `/add-message?s=How are you`. Next, in the `handleRequest` method of the `Handler` class, the `url` argument holds this message. By this time, if this is our second message after `"Hello"`, the system would already have `"1. Hello"` stored in the `state` and would have noted that we've added one message before with the `currentIdx` set to `1`.
+   
+3) How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+   - After getting the `/add-message?s=How are you` requested, the program makes two main changes. It first updates the message count by adding one to `currentIdx`, changing its value from `1` to `2`. Then, it adds the new message `"How are you"` to the state, making it read `"1. Hello\n2` `"2. How are you"`. This means our old message `"Hello"` is followed by a new line and then our new message `"How are you"`
+
+
+## Part 2: Command line using `ls` (SSH Key Handling)
 
 
