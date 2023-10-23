@@ -138,10 +138,14 @@ __Screenshot of add-messag "How are you":__
 
 
 ## Part 2: Command line using `ls` (SSH Key Handling)
-- The location of your private SSH key for accessing ieng6
-![image](user_.png)
+- The path to the private key for SSH key for logging into `ieng6` (on computer or on the home directory of the lab computer)
+  ![image](user_.png)
+- The path to the public key for SSH key for logging into `ieng6` (within your account on `ieng6`)
+  ![image](Key.png)
+- The terminal interaction logged into `ieng6` with course-specific account without being asked for a password.
+ ![image](log1.png)
 
-![image](logg.png)
-![image](Key.png)
+## Part 3: Reflection 
+
 
 
