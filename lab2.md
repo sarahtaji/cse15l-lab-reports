@@ -47,6 +47,7 @@ class StringServer {
     }
 }
 ```
+The `Server.java` file is in the `Server` class which utilizes Java's built-in `HttpServer`. A custom handler `ServerHttpHandler` is defined to manage the requests and delegate them to the `Handler`.
 
 ## Code `Server.java`: 
 ```java
