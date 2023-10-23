@@ -146,6 +146,12 @@ __Screenshot of add-messag "How are you":__
  ![image](log1.png)
 
 ## Part 3: Reflection 
+During the 2nd and 3rd weeks of the lab, I've acquired several technical skills that I wasn't familiar with before, such as:
 
+- Setting up and using `SSH keys`, which removed the constant need for entering a password every time I accessed `ieng6`.
+- Utilizing the `SCP command` to quickly transfer files between my computer and `ieng6`.
+- Build and run basic `Java web servers` and manage web requests with the `URIHandler` class.
+- Implementing the `curl` command to test URLs without opening them in a browser.
+- Familiarize myself with terminal commands, like `scp` for shifting files and `mkdir` for creating new directories.
 
 
