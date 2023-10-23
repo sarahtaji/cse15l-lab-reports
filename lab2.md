@@ -138,7 +138,9 @@ __Screenshot of add-messag "How are you":__
 
 
 ## Part 2: Command line using `ls` (SSH Key Handling)
+- The location of your private SSH key for accessing ieng6
 ![image](user_.png)
+
 ![image](logg.png)
 ![image](Key.png)
 
