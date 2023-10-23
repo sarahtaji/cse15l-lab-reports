@@ -104,6 +104,7 @@ public class Server {
 }
 ```
 -Compiling: 
+
 To compile both of the codes, we first need to change to the directory that contains both `Server.java` and `StringServer.java`
 
 Then we run it by using the following commands: 
