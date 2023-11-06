@@ -79,16 +79,18 @@ I've chosen `grep` command for my research, Which searches for specific patterns
 
 1. **Recursive Search with `-r`**
 
-We can use `-r` option to recursively search all text files within the current directory and it's subdirectories. This is beneficial when you need to find all instances of a function or method call in a codebase, regardless of where the files are located. 
+We can use `-r` option to recursively search all text files within the current directory and it's subdirectories. The `-r` option is useful for searching through a large number of files and directories when you are not sure where the content might be.
 
  - Example  1: Searching for the string "Los Angeles" in all files recursively from the current directory
-  
+   
+   > This command will list all instances of "Los Angeles" in the files of the current directory and its subdirectories.
+   
     *Input*
   
     ```console
      grep -r "Los Angeles"
     ```
-  
+
     *Output*
   
     ```console
@@ -123,11 +125,14 @@ We can use `-r` option to recursively search all text files within the current d
     ```
 Source: `man grep`
 
+
 2. **Counting Matches with `-c`**
 
-We can use `-c` to count the number of lines that match a pattern within files. This can be particularly useful when you're interested in the number of matches rather than the actual matching lines themselves, such as assessing the frequency of a specific term or phrase in files.
+We can use `-c` to count the number of lines that match a pattern within files. The `-c` option quickly provides the frequency of a term, which is particularly useful in scenarios like searching for how often a function is called in a codebase.
 
 - Example  1: Counting occurrences of the word "law" in a specific file
+  
+  > Here, grep counts how many times "law" appears in the specified text file.
   
   *Input*
 
@@ -155,12 +160,15 @@ We can use `-c` to count the number of lines that match a pattern within files. 
   ```
 
 Source: `man grep`
+
   
 3. **Context Control with -n**
 
 We can use `-n` to display the line numbers in the file before the text where a match is found when using the grep command. This is particularly useful for identifying the exact location of the text within files, which is essential when analyzing logs, code, or any structured text files.
 
 - Example 1:  Finding occurrences of "cells" and displaying their line numbers in the file `rr171.txt`
+  
+  > With `-n`, you can see the line numbers containing "cells" in `rr171.txt`, which is useful for direct referencing.
 
     *Input*
   
@@ -198,11 +206,14 @@ The additional `-H` option, in combination with `-n`, tells `grep` to display th
     ```
 Source: `man grep`
 
+
 4. **Listing files with `-l`**
 
 We can use the `-l` option with the `grep` command to output only the names of files with lines matching the search pattern instead of the usual output. This is useful when you simply want to identify files that contain a given pattern, which can be particularly useful in scenarios where you're interested in the presence of a string rather than its context. (According to `man grep`)
 
 - Example  1: Locating files that contain the term "encryption" within the `./technical/government` directory
+  
+  > This command lists file names in the `./technical/government/` directory that contain the word "encryption", ignoring any errors caused by directories.
   
     *Input*
   
