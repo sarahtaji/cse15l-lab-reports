@@ -5,7 +5,7 @@ In the `ArrayExamples` class, a bug was found within the `reversed` method. This
 
 **Failure-Inducing Input**: 
 
-The JUnit test method, `testReversed1()`, will show the defects within the `reversed` method in the `ArrayExamples`class:
+- The JUnit test method, `testReversed1()`, will show the defects within the `reversed` method in the `ArrayExamples`class:
 
 ```
 @Test
@@ -16,11 +16,11 @@ public void testReversed1()
   assertArrayEquals(new int[]{3, 2, 1}, expected);
 }
 ```
-This test should pass if the `reversed` method functions correctly, but it fails with the current implementation. 
+- This test should pass if the `reversed` method functions correctly, but it fails with the current implementation. 
 
 **Non-Failure-Inducing Input**: 
 
-The test method `testReversed()` demonstrates where the `reversed` method does not cause a failure dealing with an empty array:
+- The test method `testReversed()` demonstrates where the `reversed` method does not cause a failure dealing with an empty array:
 ```
 @Test
 public void testReversed()
@@ -30,9 +30,9 @@ public void testReversed()
 }
 
 ```
-This test passes because reversing an empty array does not change it.
+- This test passes because reversing an empty array does not change it.
 
-**Symptom:** 
+**The symptom, as the output of running the tests** 
 
-![Image](output.png)
+![Image](output2.png)
 
