@@ -21,6 +21,7 @@ public void testReversed1()
 **Non-Failure-Inducing Input**: 
 
 - The test method `testReversed()` demonstrates where the `reversed` method does not cause a failure dealing with an empty array:
+
 ```
 @Test
 public void testReversed()
