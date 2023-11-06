@@ -7,7 +7,8 @@ In the `ArrayExamples` class, a bug was found within the `reversed` method. This
 
 - The JUnit test method, `testReversed1()`, will show the defects within the `reversed` method in the `ArrayExamples`class:
 
-```
+
+```java
 @Test
 public void testReversed1()
 {
@@ -16,63 +17,63 @@ public void testReversed1()
   assertArrayEquals(new int[]{3, 2, 1}, expected);
 }
 ```
+
 - This test should pass if the `reversed` method functions correctly, but it fails with the current implementation. 
 
 **Non-Failure-Inducing Input**: 
 
-- The test method `testReversed()` demonstrates where the `reversed` method does not cause a failure dealing with an empty array:
-
-```
-@Test
-public void testReversed()
-{
-  int[] input1 = {};
-  assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
-}
-
-```
-- This test passes because reversing an empty array does not change it.
+  - The test method `testReversed()` demonstrates where the `reversed` method does not cause a failure dealing with an empty array:
+  
+  ```java
+  @Test
+  public void testReversed()
+  {
+    int[] input1 = {};
+    assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
+  }
+  ```
+  - This test passes because reversing an empty array does not change it.
 
 **The symptom, as the output of running the tests** 
 
 ![Image](output2.png)
 
-- When running the tests with the bug, it showed an error in testReversed1() because the assertion failed. The test expected the reversed array to have `{3}` as its first element but instead got an empty array `{}`. This indicates that the `reversed` method in the ArrayExamples class is not functioning as intended when reversing an array with multiple elements.
+  - When running the tests with the bug, it showed an error in testReversed1() because the assertion failed. The test expected the reversed array to have `{3}` as its first element but instead got an empty array `{}`. This indicates that the `reversed` method in the ArrayExamples class is not functioning as intended when reversing an array with multiple elements.
 
 **Orginal Code:**
 
-```
-static int[] reversed(int[] arr)
-{
-    int[] newArray = new int[arr.length];
-    for(int i = 0; i < arr.length; i += 1)
-    {
-        arr[i] = newArray[arr.length - i - 1];
-    }
-    return arr;
-}
-```
-- The method is attempting to overwrite the elements of the input array `arr` instead of using a separate array `newArray` to store the reversed elements.
+  ```java
+  static int[] reversed(int[] arr)
+  {
+      int[] newArray = new int[arr.length];
+      for(int i = 0; i < arr.length; i += 1)
+      {
+          arr[i] = newArray[arr.length - i - 1];
+      }
+      return arr;
+  }
+  ```
+  - The method is attempting to overwrite the elements of the input array `arr` instead of using a separate array `newArray` to store the reversed elements.
 
 **After:** 
 
-```
-static int[] reversed(int[] arr)
-{
-  int[] newArray = new int[arr.length];
-  for(int i = 0; i < arr.length; i++)
-    {
-        newArray[i] = arr[arr.length - i - 1];
-    }
-    return newArray;
-}
-```
-- Now, the method uses `newArray` to hold the reversed values, ensuring that the original array `arr` is not altered and the correct reversed array is returned.
+  ```java
+  static int[] reversed(int[] arr)
+  {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i++)
+      {
+          newArray[i] = arr[arr.length - i - 1];
+      }
+      return newArray;
+  }
+  ```
+  - Now, the method uses `newArray` to hold the reversed values, ensuring that the original array `arr` is not altered and the correct reversed array is returned.
 
 **Why the fix addresses the issue**
 
-- The original `reversed` method incorrectly attempted to assign the reversed values to the `arr` (the input array) itself when it should have been assigned to `newArray` (the array meant to hold the reversed values). Additionally, it returned the original array `arr`, which was not modified.
-The fix corrects these issues by correctly assigning the reversed values to `newArray` and then returning `newArray`. This ensures that the method returns a new array with the elements of the input array in reversed order, as intended.
+  - The original `reversed` method incorrectly attempted to assign the reversed values to the `arr` (the input array) itself when it should have been assigned to `newArray` (the array meant to hold the reversed values). Additionally, it returned the original array `arr`, which was not modified.
+  The fix corrects these issues by correctly assigning the reversed values to `newArray` and then returning `newArray`. This ensures that the method returns a new array with the elements of the input array in reversed order, as intended.
 
 
 ## Part 2 - Researching Commands
